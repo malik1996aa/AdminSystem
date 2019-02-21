@@ -10,6 +10,7 @@ import com.Admin.AdminApp.domain.Permission;
 import com.Admin.AdminApp.domain.PermissionRepository;
 import com.Admin.AdminApp.domain.PermissionResult;
 
+
 @RestController
 public class PermissionController {
 	@Autowired

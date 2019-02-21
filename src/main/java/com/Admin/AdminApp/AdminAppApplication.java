@@ -36,6 +36,7 @@ public class AdminAppApplication {
     	  Rolerepository.deleteAll();
     	  perRepository.deleteAll();
     	 
+    	  
           Permission per1 = new Permission("CUD Event");
           perRepository.save(per1);
           Permission per2 = new Permission("View User");
