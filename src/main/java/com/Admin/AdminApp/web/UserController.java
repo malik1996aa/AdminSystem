@@ -28,6 +28,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.Admin.AdminApp.domain.Emails;
 import com.Admin.AdminApp.domain.Keys;
 import com.Admin.AdminApp.domain.LogIn;
 import com.Admin.AdminApp.domain.LogInCircleGraph;
@@ -86,6 +87,20 @@ public class UserController {
 		return details;
 	}
 
+	@RequestMapping(value = "/emails", method = RequestMethod.GET)
+    public ArrayList<Emails> getEmail() {
+        ArrayList<Emails> emails = new ArrayList<Emails>();
+       
+        ArrayList<Users> users = (ArrayList<Users>) repository.findAll();
+        for(Users user : users)
+        {
+            Emails e=new Emails(user.getEmail());
+           emails.add(e);
+           
+        }
+        return emails;
+
+    }
 	@RequestMapping("/roles/{user_id}")
 	ArrayList<RoleResult> getRoles(@PathVariable("user_id") long user_id) {
 		return rolerepository.getRoles(user_id);
