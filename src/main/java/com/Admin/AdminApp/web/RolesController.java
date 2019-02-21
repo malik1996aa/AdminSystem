@@ -64,7 +64,6 @@ public class RolesController {
 		ArrayList<PermissionResult> permissionList = rp.getPermissions();
 		for (PermissionResult permission1 : permissionList) {
 			p = new Permission();
-
 			p.setPerId(permission1.getPerId().longValue());
 			p.setPer_name(permission1.getPer_name());
 			permissionSet.add(p);

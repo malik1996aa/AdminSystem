@@ -10,6 +10,11 @@ public class PermissionResult {
 		this.perId = perId;
 		this.per_name = per_name;
 	}
+	
+	public PermissionResult(String per_name) {
+		super();
+		this.per_name = per_name;
+	}
 	public BigInteger getPerId() {
 		return perId;
 	}
