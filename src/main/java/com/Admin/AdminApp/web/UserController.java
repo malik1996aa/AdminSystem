@@ -166,7 +166,6 @@ public class UserController {
 			user1.setEmail(user.getEmail());
 			user1.setPhone(user.getPhone());
 			user1.setPassword(user.getPassword());
-			user1.setLogin(user.getLogin());
 			repository.save(user1);
 		} else
 			return "There is no user with this id";
