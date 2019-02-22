@@ -278,5 +278,13 @@ public class UserController {
 		return null;
 
 	}
+	
+	
+	
+	
+	@RequestMapping("/getUserIdByEmail/{email}")
+	   public ArrayList<Long> getUserIdByEmail(@PathVariable("email") String email) {
+	       return repository.findByUserName(email);
+	}
 
 }

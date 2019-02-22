@@ -27,6 +27,10 @@ public interface UserRepository extends CrudRepository <Users, Long> {
 	@Query(nativeQuery=true)
 	Users loginbyEmail(@Param("Email") String email);
 
+	@Query(value ="select u.user_id from users u where u.email = ?1",nativeQuery = true)
+    ArrayList<Long> findByUserName(String userName);
+	
+	
 	@Query(nativeQuery=true)
     ArrayList<PermissionResult> getPermissionsForUser(@Param("user_id") long user_id);
 }
