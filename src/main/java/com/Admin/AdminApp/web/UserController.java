@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Admin.AdminApp.domain.Emails;
+import com.Admin.AdminApp.domain.GetIdByEmail;
 import com.Admin.AdminApp.domain.Keys;
 import com.Admin.AdminApp.domain.LogIn;
 import com.Admin.AdminApp.domain.LogInCircleGraph;
@@ -279,12 +280,10 @@ public class UserController {
 
 	}
 	
-	
-	
-	
 	@RequestMapping("/getUserIdByEmail/{email}")
-	   public ArrayList<Long> getUserIdByEmail(@PathVariable("email") String email) {
+	   public GetIdByEmail getUserIdByEmail(@PathVariable("email") String email) {
 	       return repository.findByUserName(email);
+       
 	}
 
 }

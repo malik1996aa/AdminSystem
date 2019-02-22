@@ -1,5 +1,6 @@
 package com.Admin.AdminApp.domain;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Optional;
@@ -27,8 +28,8 @@ public interface UserRepository extends CrudRepository <Users, Long> {
 	@Query(nativeQuery=true)
 	Users loginbyEmail(@Param("Email") String email);
 
-	@Query(value ="select u.user_id from users u where u.email = ?1",nativeQuery = true)
-    ArrayList<Long> findByUserName(String userName);
+	@Query(nativeQuery = true)
+	GetIdByEmail findByUserName(String userName);
 	
 	
 	@Query(nativeQuery=true)
