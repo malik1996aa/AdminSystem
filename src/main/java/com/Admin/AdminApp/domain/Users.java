@@ -60,7 +60,7 @@ public class Users {
 	private String Email;
 	private String Phone;
 	private String Password;
-	private String login;
+	private String login="No";
 	private int NumOfAttempts = 4;
 	private LocalDate lastmodified = LocalDate.now().minusDays(3);
 	private boolean lock = false;

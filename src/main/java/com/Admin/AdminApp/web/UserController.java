@@ -119,7 +119,7 @@ public class UserController {
 		user.setPhone(u.getPhone());
 		user.setEmail(u.getEmail());
 		user.setPassword(u.getPassword());
-		user.setLogin(u.getLogin());
+		
 		Set<Role> roleSet = new HashSet<Role>();
 		Role r;
 		ArrayList<RoleResult> roleList = u.getRoles();
