@@ -65,9 +65,9 @@ public class AdminAppApplication {
           pers3.add(per7);
           pers3.add(per8);
           //Add trip objects
-          Role role1 = new Role("role1","desc1",pers1);
-          Role role2 = new Role("role2","desc2",pers2);
-          Role role3 = new Role("role3","desc3",pers3);
+          Role role1 = new Role("CM Custom Support Engineer","responsible for resolving network issues, configuring operating systems and using remote desktop connections to provide immediate support",pers1);
+          Role role2 = new Role("BLM Core Team Lead","provides guidance, instruction, direction and leadership to a group of individuals (the team) for the purpose of achieving a key result",pers2);
+          Role role3 = new Role("CFF Core Admin","responsible for the upkeep and configuration of the application", pers3);
           Rolerepository.save(role1);
           Rolerepository.save(role2);
           Rolerepository.save(role3);
