@@ -58,7 +58,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 				@ColumnResult(name = "USER_ID", type = BigInteger.class)})})
 				
 @NamedNativeQuery(name = "Users.findByUserName", query = " select u.user_id from users u where u.email = ?1 ", resultSetMapping = "findByUserNameMapping")
-
+///////////////////////
+@SqlResultSetMapping(name = "getEmailByIdMapping", classes = {
+		@ConstructorResult(targetClass = Emails.class, columns = {
+				@ColumnResult(name = "EMAIL", type = String.class)})})
+				
+@NamedNativeQuery(name = "Users.getEmailById", query = " select u.EMAIL from users u where ((u.USER_ID)=:user_id) ", resultSetMapping = "getEmailByIdMapping")
 public class Users {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

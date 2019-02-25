@@ -102,6 +102,12 @@ public class UserController {
         return emails;
 
     }
+	@RequestMapping(value = "/emailByUser/{user_id}", method = RequestMethod.GET)
+    public Emails getemailByUser (@PathVariable("user_id") long user_id) {
+        
+        return repository.getEmailById(user_id);
+
+    }
 	@RequestMapping("/roles/{user_id}")
 	ArrayList<RoleResult> getRoles(@PathVariable("user_id") long user_id) {
 		return rolerepository.getRoles(user_id);
