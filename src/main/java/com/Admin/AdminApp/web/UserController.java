@@ -36,6 +36,7 @@ import com.Admin.AdminApp.domain.LogInCircleGraph;
 import com.Admin.AdminApp.domain.Permission;
 import com.Admin.AdminApp.domain.PermissionRepository;
 import com.Admin.AdminApp.domain.PermissionResult;
+import com.Admin.AdminApp.domain.Phones;
 import com.Admin.AdminApp.domain.Role;
 import com.Admin.AdminApp.domain.RoleRepository;
 import com.Admin.AdminApp.domain.RoleResult;
@@ -106,6 +107,12 @@ public class UserController {
     public Emails getemailByUser (@PathVariable("user_id") long user_id) {
         
         return repository.getEmailById(user_id);
+
+    }
+	@RequestMapping(value = "/phoneByUser/{user_id}", method = RequestMethod.GET)
+    public Phones getphoneById (@PathVariable("user_id") long user_id) {
+        
+        return repository.getPhoneById(user_id);
 
     }
 	@RequestMapping("/roles/{user_id}")
