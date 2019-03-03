@@ -31,7 +31,7 @@ public class AdminAppApplication {
 	@Bean
     CommandLineRunner runner(){
       return args -> {
-    	
+    	/*
     	  UserRepository.deleteAll();
     	  Rolerepository.deleteAll();
     	  perRepository.deleteAll();
@@ -97,6 +97,7 @@ public class AdminAppApplication {
           UserRepository.save(user2);
           Users user3 = new Users("tawfek","tawfek@gmail.com","0528432254","pass33","yes",Roles3);
           UserRepository.save(user3);
+	  */
      };
 	}
 
